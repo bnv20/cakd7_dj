@@ -20,16 +20,21 @@
                     <h5>CAKD7는 새로운 미래를 데이터로 만들어 갑니다.</h5>
                 </div>
                 <div class="col-lg-5 mt-5">
-                    <h2 class="text-light">Blog - Recent posts</h2> {% for post in recent_posts %} <div
-                        class="card mt-1">
-                        <div class="card-body">
-                            <h6><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">{{
-                                    post.title }}</a></h6>
-                            <span class="badge badge-pill badge-light float-right">
-                                <img class="mr-1 rounded-circle" width="20px" src="" alt=""> {{ post.author.username }}
-                                &nbsp; &nbsp; {{ post.created_at }} </span>
+                    <h2 class="text-light">Blog - Recent posts</h2>
+                    {% for post in recent_posts %}
+                        <div class="card mt-1">
+                            <div class="card-body">
+                                <h6><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">{{ post.title }}</a></h6>
+                                <span class="badge badge-pill badge-light float-right">
+                                    <img class="mr-1 rounded-circle" width="20px" src="" alt="">
+                                    {{ post.author.username }}
+                                    &nbsp;
+                                    &nbsp;
+                                    {{ post.created_at }}
+                               </span>
+                            </div>
                         </div>
-                    </div> {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
