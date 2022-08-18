@@ -1,0 +1,10 @@
+{% extends 'blog/base_full_width.html' %}
+{% load crispy_forms_tags %}
+{% block head_title %}Program result{% endblock %}
+
+{% block main_area %}
+    <h1>The result is here</h1>
+    <h3>The data you entered in : {{lis}}</h3>
+    <h3>The answer is {{ans}}</h3>
+
+{% endblock %}

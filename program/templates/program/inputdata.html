@@ -1,0 +1,12 @@
+{% extends 'blog/base_full_width.html' %}
+{% load crispy_forms_tags %}
+{% block head_title %}Program result{% endblock %}
+
+{% block main_area %}
+    <form action="{% url 'result' %}">
+        a: <input type="text" required name="a"> <br><br>
+        b: <input type="text" required name="b"> <br><br>
+        <input type="submit" name="" value="submit">
+    </form>
+
+{% endblock %}
